@@ -1,10 +1,14 @@
-import { Button } from './components/ui/button'
-import './index.css'
+import { Route, Routes } from "react-router";
+import "./index.css";
+
+import { Dashboard } from "./pages/app/dashboard";
+import { SignIn } from "./pages/auth/sign-in";
 
 export function App() {
   return (
-    <div className="flex h-screen items-center justify-center">
-      <Button>Enviar</Button>
-    </div>
-  )
+    <Routes>
+      <Route path="/" element={<Dashboard />} />
+      <Route path="/sign-in" element={<SignIn />} />
+    </Routes>
+  );
 }
