@@ -1,6 +1,6 @@
-import { Home, Pizza, UtensilsCrossed } from "lucide-react";
-import { Separator } from "./ui/separator";
-import { NavLink } from "./nav-link";
+import { Home, Pizza, UtensilsCrossed } from 'lucide-react'
+import { Separator } from './ui/separator'
+import { NavLink } from './nav-link'
 
 export function Header() {
   return (
@@ -21,5 +21,5 @@ export function Header() {
         </nav>
       </div>
     </div>
-  );
+  )
 }

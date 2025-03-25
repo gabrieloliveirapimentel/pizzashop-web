@@ -1,5 +1,5 @@
-import { Header } from "@/components/header";
-import { Outlet } from "react-router";
+import { Header } from '@/components/header'
+import { Outlet } from 'react-router'
 
 export function AppLayout() {
   return (
@@ -9,5 +9,5 @@ export function AppLayout() {
         <Outlet />
       </div>
     </div>
-  );
+  )
 }

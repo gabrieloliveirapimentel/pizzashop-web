@@ -1,8 +1,8 @@
-import "./index.css";
+import './index.css'
 
-import { Helmet, HelmetProvider } from "react-helmet-async";
-import { Router } from "./routes";
-import { Toaster } from "sonner";
+import { Helmet, HelmetProvider } from 'react-helmet-async'
+import { Router } from './routes'
+import { Toaster } from 'sonner'
 
 export function App() {
   return (
@@ -11,5 +11,5 @@ export function App() {
       <Toaster richColors />
       <Router />
     </HelmetProvider>
-  );
+  )
 }
