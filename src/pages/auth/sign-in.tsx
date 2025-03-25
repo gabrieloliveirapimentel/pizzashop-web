@@ -4,7 +4,7 @@ export function SignIn() {
   return (
     <>
       <Helmet title="Login" />
-      <h1>SignIn</h1>;
+      <h1>SignIn</h1>
     </>
   );
 }
