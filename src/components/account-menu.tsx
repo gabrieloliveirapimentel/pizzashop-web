@@ -1,5 +1,5 @@
-import { Building, ChevronDown, LogOut } from "lucide-react";
-import { Button } from "./ui/button";
+import { Building, ChevronDown, LogOut } from 'lucide-react'
+import { Button } from './ui/button'
 import {
   DropdownMenu,
   DropdownMenuItem,
@@ -7,7 +7,7 @@ import {
   DropdownMenuContent,
   DropdownMenuLabel,
   DropdownMenuSeparator,
-} from "./ui/dropdown-menu";
+} from './ui/dropdown-menu'
 
 export function AccountMenu() {
   return (
@@ -39,5 +39,5 @@ export function AccountMenu() {
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  );
+  )
 }

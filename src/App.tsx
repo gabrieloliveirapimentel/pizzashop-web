@@ -1,9 +1,9 @@
-import "./index.css";
+import './index.css'
 
-import { Helmet, HelmetProvider } from "react-helmet-async";
-import { Router } from "./routes";
-import { Toaster } from "sonner";
-import { ThemeProvider } from "./components/theme/theme-provider";
+import { Helmet, HelmetProvider } from 'react-helmet-async'
+import { Router } from './routes'
+import { Toaster } from 'sonner'
+import { ThemeProvider } from './components/theme/theme-provider'
 
 export function App() {
   return (
@@ -14,5 +14,5 @@ export function App() {
         <Router />
       </ThemeProvider>
     </HelmetProvider>
-  );
+  )
 }

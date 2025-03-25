@@ -1,10 +1,10 @@
-import { Home, Pizza, UtensilsCrossed } from "lucide-react";
+import { Home, Pizza, UtensilsCrossed } from 'lucide-react'
 
-import { Separator } from "./ui/separator";
-import { NavLink } from "./nav-link";
+import { Separator } from './ui/separator'
+import { NavLink } from './nav-link'
 
-import { ThemeToggle } from "./theme/theme-toggle";
-import { AccountMenu } from "./account-menu";
+import { ThemeToggle } from './theme/theme-toggle'
+import { AccountMenu } from './account-menu'
 
 export function Header() {
   return (
@@ -30,5 +30,5 @@ export function Header() {
         </div>
       </div>
     </div>
-  );
+  )
 }
