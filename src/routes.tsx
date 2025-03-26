@@ -1,13 +1,13 @@
-import { Route, Routes } from 'react-router'
+import { Route, Routes } from "react-router";
 
-import { AuthLayout } from './pages/__layouts/auth'
-import { AppLayout } from './pages/__layouts/app'
+import { AuthLayout } from "./pages/__layouts/auth";
+import { AppLayout } from "./pages/__layouts/app";
 
-import { Dashboard } from './pages/app/dashboard'
-import { Orders } from './pages/app/orders/orders'
+import { Dashboard } from "./pages/app/dashboard/dashboard";
+import { Orders } from "./pages/app/orders/orders";
 
-import { SignIn } from './pages/auth/sign-in'
-import { SignUp } from './pages/auth/sign-up'
+import { SignIn } from "./pages/auth/sign-in";
+import { SignUp } from "./pages/auth/sign-up";
 
 export function Router() {
   return (
@@ -21,5 +21,5 @@ export function Router() {
         <Route path="/orders" element={<Orders />} />
       </Route>
     </Routes>
-  )
+  );
 }
