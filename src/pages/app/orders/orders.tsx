@@ -1,15 +1,9 @@
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from '@/components/ui/table'
-import { ArrowRight, Search, X } from 'lucide-react'
+import { Table, TableBody } from '@/components/ui/table'
 import { Helmet } from 'react-helmet-async'
+
+import { OrderTableFilters } from './components/order-table-filters'
+import { OrderTableHeader } from './components/order-table-header'
+import { OrderTableRow } from './components/order-table-row'
 
 export function Orders() {
   return (
@@ -19,66 +13,13 @@ export function Orders() {
         <h1 className="text-3xl font-bold tracking-tight">Pedidos</h1>
       </div>
       <div className="space-y-2.5">
-        <form className="flex items-center gap-2">
-          <span className="text-sm font-semibold">Filtros: </span>
-          <Input placeholder="Nome do cliente" className="h-8 w-[320px]" />
-        </form>
+        <OrderTableFilters />
         <div className="border rounded-md">
           <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHead className="w-[64px]"></TableHead>
-                <TableHead className="w-[180px]">Identificador</TableHead>
-                <TableHead className="w-[180px]">Realizado há</TableHead>
-                <TableHead className="w-[140px]">Status</TableHead>
-                <TableHead>Cliente</TableHead>
-                <TableHead className="w-[140px]">Total do pedido</TableHead>
-                <TableHead className="w-[164px]"></TableHead>
-                <TableHead className="w-[132px]"></TableHead>
-              </TableRow>
-            </TableHeader>
+            <OrderTableHeader />
             <TableBody>
               {Array.from({ length: 10 }).map((_, i) => {
-                return (
-                  <TableRow key={i}>
-                    <TableCell>
-                      <Button variant="outline" size="sm">
-                        <Search className="h-3 w-3" />
-                        <span className="sr-only">Detalhes do pedido</span>
-                      </Button>
-                    </TableCell>
-                    <TableCell className="font-mono text-xs font-medium">
-                      0195d26a-d9c4-7e70-bfea-f641aceebf89
-                    </TableCell>
-                    <TableCell className="text-muted-foreground">
-                      há 15 minutos
-                    </TableCell>
-                    <TableCell>
-                      <div className="flex items-center gap-2">
-                        <span className="h-2 w-2 rounded-full bg-slate-400" />
-                        <span className="font-medium text-muted-foreground">
-                          Pendente
-                        </span>
-                      </div>
-                    </TableCell>
-                    <TableCell className="font-medium">
-                      Gabriel Pimentel
-                    </TableCell>
-                    <TableCell className="font-medium">R$149,90</TableCell>
-                    <TableCell>
-                      <Button variant="outline" size="sm">
-                        <ArrowRight className="h-3 w-3 mr-2" />
-                        <span>Aprovar</span>
-                      </Button>
-                    </TableCell>
-                    <TableCell>
-                      <Button variant="ghost" size="sm">
-                        <X className="h-3 w-3 mr-2" />
-                        <span>Cancelar</span>
-                      </Button>
-                    </TableCell>
-                  </TableRow>
-                )
+                return <OrderTableRow key={i} />
               })}
             </TableBody>
           </Table>
