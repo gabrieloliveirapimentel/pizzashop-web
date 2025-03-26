@@ -1,9 +1,9 @@
-import { Helmet } from "react-helmet-async";
-import { MonthRevenueCard } from "./components/month-revenue-card";
-import { MonthOrdersAmountCard } from "./components/month-orders-amount-card";
-import { DayOrdersAmountCard } from "./components/day-orders-amount-card";
-import { MonthCanceledOrdersAmountCard } from "./components/month-canceled-orders-amount";
-import { RevenueChart } from "./components/revenue-chart";
+import { Helmet } from 'react-helmet-async'
+import { MonthRevenueCard } from './components/month-revenue-card'
+import { MonthOrdersAmountCard } from './components/month-orders-amount-card'
+import { DayOrdersAmountCard } from './components/day-orders-amount-card'
+import { MonthCanceledOrdersAmountCard } from './components/month-canceled-orders-amount'
+import { RevenueChart } from './components/revenue-chart'
 
 export function Dashboard() {
   return (
@@ -24,5 +24,5 @@ export function Dashboard() {
         </div>
       </div>
     </>
-  );
+  )
 }

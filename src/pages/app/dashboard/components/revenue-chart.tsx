@@ -4,40 +4,40 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { ResponsiveContainer, LineChart, XAxis, YAxis, Line } from "recharts";
-import colors from "tailwindcss/colors";
+} from '@/components/ui/card'
+import { ResponsiveContainer, LineChart, XAxis, YAxis, Line } from 'recharts'
+import colors from 'tailwindcss/colors'
 
 const data = [
   {
-    date: "10/12",
+    date: '10/12',
     revenue: 1200,
   },
   {
-    date: "11/12",
+    date: '11/12',
     revenue: 800,
   },
   {
-    date: "12/12",
+    date: '12/12',
     revenue: 900,
   },
   {
-    date: "13/12",
+    date: '13/12',
     revenue: 400,
   },
   {
-    date: "14/12",
+    date: '14/12',
     revenue: 2300,
   },
   {
-    date: "15/12",
+    date: '15/12',
     revenue: 800,
   },
   {
-    date: "16/12",
+    date: '16/12',
     revenue: 640,
   },
-];
+]
 
 export function RevenueChart() {
   return (
@@ -60,9 +60,9 @@ export function RevenueChart() {
               tickLine={false}
               width={80}
               tickFormatter={(value: number) =>
-                value.toLocaleString("pt-Br", {
-                  style: "currency",
-                  currency: "BRL",
+                value.toLocaleString('pt-Br', {
+                  style: 'currency',
+                  currency: 'BRL',
                 })
               }
             />
@@ -70,11 +70,11 @@ export function RevenueChart() {
               type="linear"
               strokeWidth={2}
               dataKey="revenue"
-              stroke={colors.violet["500"]}
+              stroke={colors.violet['500']}
             />
           </LineChart>
         </ResponsiveContainer>
       </CardContent>
     </Card>
-  );
+  )
 }
