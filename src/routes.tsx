@@ -8,6 +8,7 @@ import { Orders } from './pages/app/orders/orders'
 
 import { SignIn } from './pages/auth/sign-in'
 import { SignUp } from './pages/auth/sign-up'
+import { PageNotFound } from './pages/404'
 
 export function Router() {
   return (
@@ -20,6 +21,7 @@ export function Router() {
         <Route path="/" element={<Dashboard />} />
         <Route path="/orders" element={<Orders />} />
       </Route>
+      <Route path="*" element={<PageNotFound />} />
     </Routes>
   )
 }
