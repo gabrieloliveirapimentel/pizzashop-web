@@ -5,7 +5,7 @@ export function OrderTableHeader() {
     <TableHeader>
       <TableRow>
         <TableHead className="w-[64px]"></TableHead>
-        <TableHead className="w-[180px]">Identificador</TableHead>
+        <TableHead className="w-[220px]">Identificador</TableHead>
         <TableHead className="w-[180px]">Realizado há</TableHead>
         <TableHead className="w-[140px]">Status</TableHead>
         <TableHead>Cliente</TableHead>

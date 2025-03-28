@@ -18,8 +18,10 @@ sudo docker-compose up -d
 ```
 
 **Inicie o servidor de desenvolvimento**  
-Se o banco de dados já foi previamente criado, basta rodar o comando:
+Rodar o comando para iniciar o banco de dados e o servidor:
 ```bash
+bun migrate
+bun seed
 bun dev
 ```
 
