@@ -3,7 +3,7 @@ import {
   DialogDescription,
   DialogHeader,
   DialogTitle,
-} from '@/components/ui/dialog'
+} from "@/components/ui/dialog";
 import {
   Table,
   TableBody,
@@ -12,9 +12,13 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '@/components/ui/table'
+} from "@/components/ui/table";
 
-export function OrderDetails() {
+export interface OrderDetailsProps {
+  orderId: string;
+}
+
+export function OrderDetails({ orderId }: OrderDetailsProps) {
   return (
     <DialogContent>
       <DialogHeader>
@@ -100,5 +104,5 @@ export function OrderDetails() {
         </Table>
       </div>
     </DialogContent>
-  )
+  );
 }

@@ -1,19 +1,19 @@
-import { Button } from '@/components/ui/button'
-import { Dialog, DialogTrigger } from '@/components/ui/dialog'
-import { TableRow, TableCell } from '@/components/ui/table'
-import { Search, ArrowRight, X } from 'lucide-react'
-import { OrderDetails } from './order-details'
-import { OrderStatus } from '@/components/order-status'
-import { formatDate } from '@/lib/utils'
+import { Button } from "@/components/ui/button";
+import { Dialog, DialogTrigger } from "@/components/ui/dialog";
+import { TableRow, TableCell } from "@/components/ui/table";
+import { Search, ArrowRight, X } from "lucide-react";
+import { OrderDetails } from "./order-details";
+import { OrderStatus } from "@/components/order-status";
+import { formatDate } from "@/lib/utils";
 
 export interface OrderTableRowProps {
   order: {
-    orderId: string
-    createdAt: string
-    status: 'pending' | 'canceled' | 'processing' | 'delivering' | 'delivered'
-    customerName: string
-    total: number
-  }
+    orderId: string;
+    createdAt: string;
+    status: "pending" | "canceled" | "processing" | "delivering" | "delivered";
+    customerName: string;
+    total: number;
+  };
 }
 
 export function OrderTableRow({ order }: OrderTableRowProps) {
@@ -28,7 +28,7 @@ export function OrderTableRow({ order }: OrderTableRowProps) {
             </Button>
           </DialogTrigger>
 
-          <OrderDetails />
+          <OrderDetails orderId={order.orderId} />
         </Dialog>
       </TableCell>
       <TableCell className="font-mono text-xs font-medium">
@@ -42,9 +42,9 @@ export function OrderTableRow({ order }: OrderTableRowProps) {
       </TableCell>
       <TableCell className="font-medium">{order.customerName}</TableCell>
       <TableCell className="font-medium">
-        {order.total.toLocaleString('pt-BR', {
-          style: 'currency',
-          currency: 'BRL',
+        {order.total.toLocaleString("pt-BR", {
+          style: "currency",
+          currency: "BRL",
         })}
       </TableCell>
       <TableCell>
@@ -60,5 +60,5 @@ export function OrderTableRow({ order }: OrderTableRowProps) {
         </Button>
       </TableCell>
     </TableRow>
-  )
+  );
 }
